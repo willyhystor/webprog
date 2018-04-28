@@ -15,4 +15,4 @@ html{scroll-behavior: smooth;}
 .form-sz{padding: 15px 0px;}
 .lbl-w{font-weight: 10;}
 .force-fc{width: 50% !important;}
-.err_msg{color: red;}
+.error{color: red;}

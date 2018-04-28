@@ -6,12 +6,15 @@
 
 <?php 
 $base_url = URL::to('/');
+
 $heredoc = <<<EOT
 var base_url = '{$base_url}';
-EOT;
 
-$init_script = <<<EOT
-var base_url = "{$base_url}";
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
 EOT;
 
 echo TemplateHelper::script_top_heredoc(array($heredoc));
