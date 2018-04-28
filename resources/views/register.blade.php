@@ -6,7 +6,8 @@
     <div class="col-xs-4 col-xs-offset-4 reg-cen">Register</div>
     <div class="col-xs-12 form-sz">
         <form id="form_register" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="token_regis" id="token_regis" value="{{ csrf_token() }}">
+            <!-- <input type="hidden" name="token_regis" id="token_regis" value="{{ csrf_token() }}"> -->
+            <!-- <div id="csrf" class="hide">{{ csrf_token() }}</div> -->
             <div class="col-xs-offset-4 col-xs-8">
                 <div class="col-xs-12">
                     <label for="customer_name" class="lbl-w">Fullname</label>

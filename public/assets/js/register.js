@@ -1,3 +1,9 @@
+$.ajaxSetup({
+   headers: {
+       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+   }
+});
+
 $('#register_submit').on('click', function(){
 	$('#form_register').validate({ ignore : [] });
 
@@ -12,9 +18,11 @@ $('#register_submit').on('click', function(){
 	var address = $('#customer_address').val();
 	// var form = new FormData(document.querySelector('input[type=file]').files[0]);
 	var form = new FormData($("#form_register")[0]);
-	form = form.append('csrfmiddlewaretoken', token);
-	console.log(token);
+	// form = form.append('csrfmiddlewaretoken', '{{ csrf_token }}');
 	var picture_name = $('#customer_picture').val();
+    console.log(token);
+    console.log(form);
+    console.log(picture_name);
 
 	/*validation time*/
 	console.log('test');

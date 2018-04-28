@@ -13,6 +13,12 @@ class Register extends Controller
     {
         $post = Request::all();
 
-        print_r($post); die;
+        //upload profile picture
+        $file = Request::file('customer_picture');
+        $file_name = date('YmdHis').'_'.$file->getClientOriginalName();
+        $file->move('../public/assets/images/profile_picture', $file_name);
+
+        // print_r($post['customer_picture']); die;
+        print_r('$test'); die;
     }
 }

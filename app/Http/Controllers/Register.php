@@ -11,6 +11,10 @@ class Register extends Controller
 {
     public function register()
     {
+    	$data['meta_tag'] = array(
+    		array('key' => 'name', 'name' => 'csrf-token', 'content' => csrf_token()),
+    	);
+
         $data['css_top'] = array(
             array('href' => 'assets/css/main.css'),
         );
