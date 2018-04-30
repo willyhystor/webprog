@@ -13,19 +13,15 @@ $('#register_submit').on('click', function(){
 	var password = $('#customer_password').val();
 	var password_confirm = $('#customer_password_confirm').val();
 	var phone = $('#customer_phone').val();
-	var gender = $('#customer_gender_male').val(); //default gender => male
+	var gender = $('#customer_gender_male').val(); /*default gender => male*/
 	var gender_opt = document.getElementsByName('customer_gender');
 	var address = $('#customer_address').val();
-	// var form = new FormData(document.querySelector('input[type=file]').files[0]);
+	/*var form = new FormData(document.querySelector('input[type=file]').files[0]);*/
 	var form = new FormData($("#form_register")[0]);
-	// form = form.append('csrfmiddlewaretoken', '{{ csrf_token }}');
+	/*form = form.append('csrfmiddlewaretoken', '{{ csrf_token }}');*/
 	var picture_name = $('#customer_picture').val();
-    console.log(token);
-    console.log(form);
-    console.log(picture_name);
 
 	/*validation time*/
-	console.log('test');
 	jQuery.validator.addMethod('letters', function(value) {
         if(value == '') {  
             return true;  
@@ -217,39 +213,14 @@ $('#register_submit').on('click', function(){
     		processData: false,
     		success: function(data)
     		{
-    			console.log('sukses');
+                var data = JSON.parse(data);
+                if(data['status'] == 1)
+                {
+                    console.log('sukses');
+                    window.location = base_url;
+                }
     		}
     	});
-
-    	// $.ajax({
-    	// 	url: base_url+'/rest/register',
-    	// 	type: 'post',
-    	// 	dataType: 'json',
-    	// 	data:
-    	// 	{
-    	// 		customer_name: name,
-    	// 		customer_email: email,
-    	// 		customer_password: password,
-    	// 		customer_phone: phone,
-    	// 		customer_gender: gender,
-    	// 		customer_address: address,
-    	// 		customer_picture: picture,
-    	// 		customer_picture_name: picture_name,
-    	// 		_token:token,
-    	// 	},
-    	// 	success: function(data)
-    	// 	{
-     //            if(data.status == 1)
-     //            {
-     //            	window.location.assign(base_url);
-     //                // window.location.assign(base_url+"customer/wait_page_activation/"+ data['tokenkey']); //kira-kira aktifin akunnya bijigini urlnya
-     //            }
-    	// 	},
-    	// 	error: function(request, status, error)
-    	// 	{
-
-    	// 	}
-    	// });
     }
 });
 

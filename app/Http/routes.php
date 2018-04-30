@@ -11,13 +11,12 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', 'homeController@home');
-Route::get('/register', 'Register@register');
+Route::get('/register', 'Customer@register');
+Route::get('/login', 'Customer@login');
+Route::get('/logout', 'Customer@logout');
 
 Route::group(['prefix' => 'rest'], function (){
 	Route::post('/register', 'Rest\Register@regis');
+	Route::post('/login', 'Rest\Login@login');
 });
