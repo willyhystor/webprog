@@ -12,13 +12,13 @@
                 <div class="col-xs-12">
                     <label for="customer_email" class="lbl-w">Email</label>
                     <div class="form-group">
-                        <input type="text" class="form-control force-fc" id="customer_email" name="customer_email">
+                        <input type="text" class="form-control force-fc" id="customer_email" name="customer_email" value="<?php echo isset($email)? $email : ''; ?>">
                     </div>
                 </div>
                 <div class="col-xs-12" style="margin-bottom: 15px !important;">
                     <label for="customer_password" class="lbl-w">Password</label>
                     <div class="form-group" style="margin-bottom: 0px !important;">
-                        <input type="text" class="form-control force-fc" id="customer_password" name="customer_password">
+                        <input type="password" class="form-control force-fc" id="customer_password" name="customer_password" value="<?php echo isset($password)? $password : '';?>">
                     </div>
                 </div>
                 <div class="col-xs-12" style="margin-bottom: 15px !important;">

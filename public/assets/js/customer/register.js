@@ -7,7 +7,6 @@ $.ajaxSetup({
 $('#register_submit').on('click', function(){
 	$('#form_register').validate({ ignore : [] });
 
-	var token = $('#token_regis').val();
 	var name = $('#customer_name').val();
 	var email = $('#customer_email').val();
 	var password = $('#customer_password').val();

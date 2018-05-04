@@ -9,7 +9,7 @@
             }
             else
             {
-                echo 'Nama Perusahaan';
+                echo 'Sibuk Skripsi';
             }
             ?>
         </title> 

@@ -14,6 +14,22 @@
     					<li><a href="<?php echo URL::to('/logout'); ?>">Logout</a></li>
     					<?php
     				}
+                    else if(Session::has('admin'))
+                    {
+                        ?>
+                        <li><a href="<?php echo URL::to('/profile'); ?>">Profile</a></li>
+                        <li class="dropdown">
+                            <div class="dropdown-toggle" data-toggle="dropdown">Admin<span class="caret"></span></div>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo URL::to('/manage-cake'); ?>">Manage Cakes</a></li>
+                                <li><a href="<?php echo URL::to('/manage-profiles'); ?>">Manage Profiles</a></li>
+                                <li><a href="<?php echo URL::to('/manage-categories'); ?>">Manage Categories</a></li>
+                                <li><a href="<?php echo URL::to('/transaction-history'); ?>">Transaction History</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="<?php echo URL::to('/logout'); ?>">Logout</a></li>
+                        <?php
+                    }
     				else
     				{
     					?>

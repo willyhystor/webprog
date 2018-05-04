@@ -8,11 +8,22 @@ html{scroll-behavior: smooth;}
 .nav-menu li a{color: white;}
 
 /*Footer*/
-.footer-bg{background-color: #f7859c; text-align: center; color: white;}
+.footer-bg{background-color: #f7859c; text-align: center; color: white; height: 40px;}
+.foot-mid-text{padding-top: 10px;}
 
 /*Register*/
 .reg-cen{text-align: center; font-size: 25px; padding: 10px 0px;}
+.bar-cen{text-align: center; padding: 10px 0px;}
 .form-sz{padding: 15px 0px;}
 .lbl-w{font-weight: 10;}
 .force-fc{width: 50% !important;}
+.force-fc-2{width: 75% !important;}
 .error{color: red;}
+
+.dropdown-menu {background-color: #f7859c;}
+
+/*Menu*/
+.pad-menu{padding: 0px 500px;}
+.center{text-align: center; padding-bottom: 50px;}
+
+.btn-primary{background-color: #f7859c !important;}
