@@ -24,6 +24,7 @@
                 <div class="col-xs-12" style="margin-bottom: 15px !important;">
                     <input id="remember_me" name="remember_me" type="checkbox" <?php echo isset($checked)? $checked: ''; ?> ><label for="remember_me">Remember Me</label>
                 </div>
+                <div class="err"></div>
                 <div class="col-xs-12">
                     <a href="javascript:void(0)" id="login_submit" type="submit" class="btn btn-primary">Login</a>
                 </div>

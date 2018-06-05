@@ -73,6 +73,7 @@ $('#login_submit').on('click', function(){
                 else
                 {
                     console.log(data['message']);
+                    $('.err').html(data['message']);
                 }
     		}
     	});
