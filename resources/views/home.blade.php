@@ -5,7 +5,7 @@
 <div class="col-xs-12">
     <div class="col-xs-4 col-xs-offset-4 reg-cen">Our Products</div>
     <div class="col-xs-4 col-xs-offset-4 bar-cen">
-    	search bar
+    	<input type="text" id="search_bar" name="search_bar"><a href="javascript:void(0)" id="search" class="btn btn-primary">Search</a>
     </div>
     <div class="col-xs-12 pad-menu">
     	<?php 
